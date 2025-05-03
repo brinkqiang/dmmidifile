@@ -90,15 +90,7 @@ endif()
 # The following programs require headers from humextra repository.
 # <https://github.com/humdrum-tools/humextra>
 if(HAVE_HUMDRUM_H)
-    add_executable(henonfile tools/henonfile.cpp)
-    add_executable(mid2hum tools/mid2hum.cpp)
-    add_executable(midiexcerpt tools/midiexcerpt.cpp)
-    add_executable(peep2midi tools/peep2midi.cpp)
-
-    target_link_libraries(henonfile midifile)
-    target_link_libraries(mid2hum midifile)
-    target_link_libraries(midiexcerpt midifile)
-    target_link_libraries(peep2midi midifile)
+    ExeImport("humextra-tools" "midifile")
 endif()
 
 install(TARGETS midifile
