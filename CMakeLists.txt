@@ -20,7 +20,7 @@ check_include_files(unistd.h HAVE_UNISTD_H)
 check_include_files(humdrum.h HAVE_HUMDRUM_H)
 check_include_files(sys/io.h HAVE_SYS_IO_H)
 
-option(BUILD_MIDILIBRARY_ONLY "Build only the midifile library" OFF)
+option(BUILD_MIDILIBRARY_ONLY "Build only the midifile library" ON)
 
 ##############################
 ##
