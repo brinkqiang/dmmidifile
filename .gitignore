@@ -13,3 +13,5 @@ CTestTestfile.cmake
 /build/*
 /.vscode/*
 /include/dmtimer_config.h
+/tools/.makeCmake
+/tools/.makeReadme
