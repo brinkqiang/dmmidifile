@@ -80,14 +80,11 @@ add_library(midifile STATIC ${SRCS} ${HDRS})
 ##
 
 if(NOT BUILD_MIDILIBRARY_ONLY)
-
-    ExeImport("tools" "midifile")
+    ExeImport("tools" "midifile")  
 endif()
 
 if(HAVE_UNISTD_H AND HAVE_SYS_IO_H)
-    add_executable(midi2beep tools/midi2beep.cpp)
-
-    target_link_libraries(midi2beep midifile)
+    ExeImport("linux-tools" "midifile")  
 endif()
 
 # The following programs require headers from humextra repository.
