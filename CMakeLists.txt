@@ -84,7 +84,7 @@ if(NOT BUILD_MIDILIBRARY_ONLY)
 endif()
 
 if(HAVE_UNISTD_H AND HAVE_SYS_IO_H)
-    ExeImport("linux-tools" "midifile")  
+    ExeImport("unix-like-tools" "midifile")  
 endif()
 
 # The following programs require headers from humextra repository.
